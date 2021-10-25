@@ -14,9 +14,11 @@ func Test_longestCommonSubsequence(t *testing.T) {
 		args args
 		want []string
 	}{
-		{"1", args{"ABCD", "ACBAD"}, []string{"ABD", "ACD"}},
-		{"2", args{"BCD", "ACBAD"}, []string{"BD", "CD"}},
-		{"3", args{"ABCDEFG", "CBADFEG"}, []string{"BDEG", "BDFG", "ADEG", "ADFG"}},
+		{"1", args{"A", "A"}, []string{"A"}},
+		{"2", args{"A", "B"}, []string{""}},
+		{"3", args{"BCD", "ACBAD"}, []string{"BD", "CD"}},
+		{"4", args{"ABCD", "ACBAD"}, []string{"ABD", "ACD"}},
+		{"5", args{"ABCDEFG", "CBADFEG"}, []string{"BDEG", "BDFG", "ADEG", "ADFG", "CDEG", "CDFG"}},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
