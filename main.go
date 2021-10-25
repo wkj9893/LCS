@@ -12,6 +12,9 @@ func longestCommonSubsequence(s1, s2 string) []string {
 		dp = append(dp, make([]int, n+1))
 		res = append(res, make([][]string, n+1))
 	}
+	for i := 0; i <= m; i++ {
+		res[i][0] = []string{""}
+	}
 	for j := 0; j <= n; j++ {
 		res[0][j] = []string{""}
 	}
